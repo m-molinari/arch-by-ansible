@@ -49,6 +49,7 @@
     - openssh
     - os-prober
     - pinta
+    - pcsxr
     - rsync
     - simple-scan
     - smbclient
