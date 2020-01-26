@@ -8,6 +8,7 @@ list_of_packages:
     - iso-flag-png
     - jmtpfs
     - maia-icon-theme
+    - papirus-maia-icon-theme-git
     - mint-themes
     - mint-x-icons
     - rsyslog
