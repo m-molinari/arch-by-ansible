@@ -2,4 +2,16 @@
 - name: Install packages
   pacman: "{{ item }}"
   with_items:
-    - "{{ list_of_packages }}" 
+    - "{{ grub }}" 
+    - "{{ drivers }}" 
+    - "{{ display_manager }}" 
+    - "{{ desktop_env }}" 
+    - "{{ themes }}" 
+    - "{{ desktop_utilities }}" 
+    - "{{ accessories }}" 
+    - "{{ clients }}" 
+    - "{{ games }}" 
+    - "{{ file_system }}" 
+    - "{{ graphics }}" 
+    - "{{ bash }}" 
+    - "{{ sys }}" 

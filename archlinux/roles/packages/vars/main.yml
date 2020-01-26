@@ -1,61 +1,80 @@
 ---
-list_of_packages:
-    - bash-completion
+grub:
+    - grub
+    - grub-customizer
+    - os-prober
+drivers:
+    - hplip
+    - xf86-video-nouveau
+    - xf86-video-vesa
+display_manager:
+    - lightdm
+desktop_env:
+    - cinnamon
+    - nemo
+    - nemo-fileroller
+    - nemo-share
+themes:
+    - mint-themes
+    - mint-x-icons
+desktop_utilities:
+    - brasero
     - bluez
     - blueman
-    - bind-tools
-    - brasero
-    - curl
-    - cifs-utils
     - deja-dup
-    - dialog
     - evince
-    - eog
-    - firefox
-    - filezilla
-    - gimp
-    - git
-    - gparted
     - gnome-calculator
     - gnome-disk-utility
     - gnome-screenshot
     - gnome-keyring
-    - grub-customizer
+    - gparted
+    - libreoffice-fresh
+accessories:
+    - keepassxc
+    - gedit
+    - vim
+    - bind-tools
+    - curl
+clients:
+    - firefox
+    - filezilla
+    - thunderbird
+    - transmission-gtk
+games:
+    - pcsxr
+file_system:
+    - cifs-utils
+    - libmtp
     - gvfs-smb
     - gvfs-mtp
-    - hplip
-    - htop
-    - keepassxc
+    - mtpfs
+    - nfs-utils
+    - ntfs-3g
+    - samba
+graphics:
+    - eog
+    - gimp
+    - pinta
+bash:
+    - bash-completion
+    - neofetch
+    - tree
+sys:
+    - dialog
+    - git
     - keychain
+    - htop
     - iptables
     - lsof
-    - libreoffice-fresh
-    - libmtp
     - linux-lts
     - meld
-    - mint-themes
-    - mint-x-icons
-    - mtpfs
-    - mintlocale
-    - neofetch
-    - nemo-share
     - net-tools
     - netctl
-    - ntfs-3g
-    - nfs-utils
     - openssh
-    - os-prober
-    - pinta
-    - pcsxr
     - rsync
     - simple-scan
     - smbclient
-    - samba
     - tcpdump
-    - thunderbird
-    - transmission-gtk
     - terminator
-    - tree
     - usbutils
-    - vim
     - whois
