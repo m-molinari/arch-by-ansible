@@ -22,6 +22,8 @@ desktop_env:
 themes:
     - mint-themes
     - mint-x-icons
+    - papirus-icon-theme
+    - papirus-maia-icon-theme-git
 desktop_utilities:
     - brasero
     - bluez
