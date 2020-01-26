@@ -1,4 +1,9 @@
 ---
+- name: iptables install package
+  pacman:
+    name: iptables
+    state: present
+
 - name: iptables service enable
   become: yes
   become_user: root

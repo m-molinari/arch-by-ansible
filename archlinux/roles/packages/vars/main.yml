@@ -29,11 +29,12 @@ desktop_utilities:
     - gnome-keyring
     - gparted
     - libreoffice-fresh
+    - simple-scan
 accessories:
     - keepassxc
     - gedit
+    - meld
     - vim
-    - bind-tools
     - curl
 clients:
     - firefox
@@ -60,19 +61,17 @@ bash:
     - neofetch
     - tree
 sys:
+    - bind-tools
     - dialog
     - git
     - keychain
     - htop
-    - iptables
     - lsof
     - linux-lts
-    - meld
     - net-tools
     - netctl
     - openssh
     - rsync
-    - simple-scan
     - smbclient
     - tcpdump
     - terminator
