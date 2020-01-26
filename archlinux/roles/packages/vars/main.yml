@@ -3,6 +3,11 @@ grub:
     - grub
     - grub-customizer
     - os-prober
+kernel:
+    - linux
+    - linux-firmware
+    - linux-lts
+    - linux-lts-headers
 drivers:
     - hplip
     - xf86-video-nouveau

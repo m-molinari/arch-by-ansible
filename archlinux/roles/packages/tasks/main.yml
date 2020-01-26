@@ -3,6 +3,7 @@
   pacman: "{{ item }}"
   with_items:
     - "{{ grub }}" 
+    - "{{ kernel }}"
     - "{{ drivers }}" 
     - "{{ display_manager }}" 
     - "{{ desktop_env }}" 
