@@ -7,3 +7,4 @@
     - iptables
     - packages
     - yay
+    - services

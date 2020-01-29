@@ -1,0 +1,10 @@
+---
+- name: NetorkManager service enable
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  systemd:
+    name: NetworkManager
+    state: started
+    enabled: yes
