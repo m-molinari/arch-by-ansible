@@ -18,7 +18,10 @@ Example Playbook
 
 This example is a simple playbook.yml 
 
-use: ansible-playbook tests/test.yml --check --diff
+use: 
+```yaml
+ansible-playbook tests/test.yml --check --diff
+```
 to try this role
 
 ```yaml
