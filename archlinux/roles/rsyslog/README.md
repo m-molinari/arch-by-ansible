@@ -21,6 +21,7 @@ This example is a simple playbook.yml
 use: ansible-playbook tests/test.yml --check --diff
 to try this role
 
+```yaml
 ---
 - name: test rsyslog module
   hosts: localhost
@@ -28,4 +29,4 @@ to try this role
 
   roles:
     - rsyslog
-
+```
