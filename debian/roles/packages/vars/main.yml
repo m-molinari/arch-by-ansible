@@ -1,0 +1,47 @@
+---
+themes:
+    - mint-themes
+    - mint-x-icons
+desktop_utilities:
+    - brasero
+    - deja-dup
+    - evince
+    - gnome-calculator
+    - gnome-disk-utility
+    - gnome-screenshot
+    - gparted
+    - simple-scan
+accessories:
+    - keepassxc
+    - gedit
+    - meld
+    - vim
+    - curl
+clients:
+    - firefox
+    - filezilla
+    - thunderbird
+games:
+    - pcsxr
+graphics:
+    - eog
+    - gimp
+    - pinta
+bash:
+    - bash-completion
+    - neofetch
+    - tree
+sys:
+    - bind-tools
+    - dialog
+    - git
+    - htop
+    - lsof
+    - net-tools
+    - openssh-client
+    - rsync
+    - smbclient
+    - tcpdump
+    - terminator
+    - usbutils
+    - whois
