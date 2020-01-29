@@ -8,3 +8,4 @@
     - packages
     - yay
     - services
+    - rsyslog

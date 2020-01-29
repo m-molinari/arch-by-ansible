@@ -11,6 +11,5 @@ list_of_packages:
     - papirus-maia-icon-theme-git
     - mint-themes
     - mint-x-icons
-    - rsyslog
     - ttf-ms-fonts
     - whatsapp-nativefier
