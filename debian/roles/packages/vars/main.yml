@@ -1,4 +1,8 @@
 ---
+themes:
+    - mate-icon-theme-faenza
+    - faenza-icon-theme
+    - gnome-wise-icon-theme
 desktop_utilities:
     - brasero
     - deja-dup
