@@ -16,11 +16,17 @@ roles/yay
 Example Playbook
 ----------------
 
-This example is a simple playbook.yml 
+This example is a simple playbook called test.yml 
 
-use: ansible-playbook tests/test.yml --check --diff
+use: 
+```yaml
+ansible-playbook tests/test.yml --check --diff
+```
 to try this role
 
+test.yaml :
+
+```yaml
 ---
 - name: test rsyslog module
   hosts: localhost
@@ -28,4 +34,4 @@ to try this role
 
   roles:
     - rsyslog
-
+```
