@@ -1,7 +1,4 @@
 ---
-themes:
-    - mint-themes
-    - mint-x-icons
 desktop_utilities:
     - brasero
     - deja-dup
@@ -32,8 +29,7 @@ bash:
     - neofetch
     - tree
 sys:
-    - bind-tools
-    - dialog
+    - dnsutils
     - git
     - htop
     - lsof
