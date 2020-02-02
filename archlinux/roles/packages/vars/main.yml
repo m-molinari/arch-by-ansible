@@ -33,6 +33,7 @@ desktop_utilities:
     - gnome-screenshot
     - gnome-keyring
     - gparted
+    - gsmartcontrol
     - libreoffice-fresh
     - simple-scan
 accessories:
@@ -78,6 +79,7 @@ sys:
     - openssh
     - rsync
     - smbclient
+    - smartmontools
     - tcpdump
     - terminator
     - usbutils
