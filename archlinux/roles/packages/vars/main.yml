@@ -66,6 +66,8 @@ bash:
     - bash-completion
     - neofetch
     - tree
+dev:
+    - code
 sys:
     - bind-tools
     - dialog
