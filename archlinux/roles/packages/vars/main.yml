@@ -40,12 +40,14 @@ accessories:
     - keepassxc
     - gedit
     - meld
+    - seahorse
     - vim
     - curl
 clients:
     - firefox
     - filezilla
     - thunderbird
+    - thunderbird-extension-enigmail
     - transmission-gtk
 games:
     - pcsxr
