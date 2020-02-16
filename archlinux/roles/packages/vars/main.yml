@@ -19,6 +19,7 @@ desktop_env:
     - nemo
     - nemo-fileroller
     - nemo-share
+    - nemo-seahorse
 themes:
     - mint-themes
     - mint-x-icons
