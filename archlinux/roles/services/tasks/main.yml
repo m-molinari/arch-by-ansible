@@ -1,5 +1,5 @@
 ---
-- name: NetorkManager service enable
+- name: NetworkManager service enable
   become: yes
   become_user: root
   become_method: sudo
