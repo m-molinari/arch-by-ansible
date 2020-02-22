@@ -7,6 +7,7 @@ list_of_packages:
     - google-chrome
     - iso-flag-png
     - jmtpfs
+    - kazam
     - maia-icon-theme
     - papirus-maia-icon-theme-git
     - mint-themes
