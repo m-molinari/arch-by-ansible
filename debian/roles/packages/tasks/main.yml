@@ -1,9 +1,13 @@
 ---
 - name: Install packages
+<<<<<<< HEAD
   apt:
     name: "{{ item }}"
     update_cache: true
     state: present
+=======
+  apt: "{{ item }}"
+>>>>>>> a5d48cbf3ae6fb45049ca8a11d3d14b55ee13fc9
   with_items:
     - "{{ themes }}" 
     - "{{ desktop_utilities }}" 
