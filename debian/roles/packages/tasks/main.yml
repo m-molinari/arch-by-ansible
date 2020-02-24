@@ -1,8 +1,7 @@
 ---
 - name: Install packages
-  pacman: "{{ item }}"
+  apt: "{{ item }}"
   with_items:
-    - "{{ desktop_env }}" 
     - "{{ themes }}" 
     - "{{ desktop_utilities }}" 
     - "{{ accessories }}" 
