@@ -19,7 +19,7 @@ accessories:
     - vim
     - curl
 clients:
-    - firefox
+    - firefox-esr
     - filezilla
     - thunderbird
 games:
@@ -27,7 +27,6 @@ games:
 graphics:
     - eog
     - gimp
-    - pinta
 bash:
     - bash-completion
     - neofetch

@@ -1,8 +1,10 @@
 ---
 - name: Install packages
-  pacman: "{{ item }}"
+  apt:
+    name: "{{ item }}"
+    update_cache: true
+    state: present
   with_items:
-    - "{{ desktop_env }}" 
     - "{{ themes }}" 
     - "{{ desktop_utilities }}" 
     - "{{ accessories }}" 
