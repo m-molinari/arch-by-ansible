@@ -12,6 +12,10 @@ drivers:
     - hplip
     - xf86-video-nouveau
     - xf86-video-vesa
+lib:
+    - libdvdread
+    - libdvdcss
+    - libdvdnav
 display_manager:
     - lightdm
 desktop_env:
