@@ -16,6 +16,7 @@ lib:
     - libdvdread
     - libdvdcss
     - libdvdnav
+    - python-configobj
 display_manager:
     - lightdm
 desktop_env:
