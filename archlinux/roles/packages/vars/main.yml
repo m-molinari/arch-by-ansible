@@ -29,6 +29,7 @@ themes:
     - mint-themes
     - mint-x-icons
 desktop_utilities:
+    - baobab
     - brasero
     - bluez
     - blueman
