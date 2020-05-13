@@ -96,3 +96,6 @@ sys:
     - terminator
     - usbutils
     - whois
+video:
+    - vlc
+    - totem
