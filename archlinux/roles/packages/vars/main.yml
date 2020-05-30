@@ -81,6 +81,7 @@ dev:
 sys:
     - bind-tools
     - dialog
+    - docker
     - git
     - keychain
     - htop
