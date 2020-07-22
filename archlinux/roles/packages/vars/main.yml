@@ -12,6 +12,7 @@ drivers:
     - hplip
     - xf86-video-nouveau
     - xf86-video-vesa
+    - usb_modeswitch
 lib:
     - libdvdread
     - libdvdcss
