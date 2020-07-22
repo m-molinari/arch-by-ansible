@@ -13,6 +13,8 @@ drivers:
     - xf86-video-nouveau
     - xf86-video-vesa
     - usb_modeswitch
+    - mobile-broadband-provider-info
+    - nm-connection-editor
 lib:
     - libdvdread
     - libdvdcss
