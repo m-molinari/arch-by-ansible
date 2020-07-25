@@ -52,3 +52,5 @@ sys:
     - usbutils
     - whois
     - wget
+dev:
+    - code
