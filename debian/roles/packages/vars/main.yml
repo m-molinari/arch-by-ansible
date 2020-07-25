@@ -4,7 +4,9 @@ themes:
     - faenza-icon-theme
     - gnome-wise-icon-theme
 desktop_utilities:
+    - audacity
     - brasero
+    - bleachbit
     - deja-dup
     - evince
     - gnome-calculator
@@ -12,9 +14,12 @@ desktop_utilities:
     - gnome-screenshot
     - gparted
     - simple-scan
+    - psensor
+    - vlc
 accessories:
     - keepassxc
     - gedit
+    - gimp
     - meld
     - vim
     - curl
@@ -32,9 +37,11 @@ bash:
     - neofetch
     - tree
 sys:
+    - curl
     - dnsutils
     - git
     - htop
+    - iputils-ping
     - lsof
     - net-tools
     - openssh-client
@@ -44,3 +51,4 @@ sys:
     - terminator
     - usbutils
     - whois
+    - wget
