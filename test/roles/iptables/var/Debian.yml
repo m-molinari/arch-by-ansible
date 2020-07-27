@@ -1,0 +1,39 @@
+---
+- name: iptables install package
+  apt:
+    name: iptables
+    state: present
+
+- name: iptables-persistent install package 
+  apt:
+    name: iptables-persistent
+    state: present
+
+- name: Set the policy for the INPUT chain to DROP
+  iptables:
+    chain: INPUT
+    policy: DROP
+
+- name: Allow related and established connections
+  iptables:
+    chain: INPUT
+    ctstate: ESTABLISHED,RELATED
+    jump: ACCEPT
+
+- name: Allow loopback
+  iptables:
+    chain: INPUT
+    in_interface: lo
+    jump: ACCEPT
+
+- name: Save iptables rules
+  shell:  /usr/sbin/iptables-save -f /etc/iptables.up.rules
+
+- name: Copy script
+  copy:
+     src: iptables
+     dest: /etc/network/if-pre-up.d/iptables
+     owner: root
+     group: root
+     mode: '0744'
+

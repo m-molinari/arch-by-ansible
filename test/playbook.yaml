@@ -5,8 +5,7 @@
   become_user: root
   roles:
     - iptables
-    - packages
-      #    - yay
-      #- services
-      #- rsyslog
+      # - packages
    - { role: yay, when: ansible_distribution == "Archlinux" }
+   - { role: services, when: ansible_distribution == "Archlinux" }
+   - { role: rsyslog, when: ansible_distribution == "Archlinux" }
