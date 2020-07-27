@@ -1,16 +1,4 @@
 ---
-- name: NetworkManager service enable
-  become: yes
-  become_user: root
-  become_method: sudo
-
-  systemd:
-    name: NetworkManager
-    state: started
-    enabled: yes
-
-  systemd:
-    name: cups-browsed.service
-    state: started
-    enabled: yes
+- name: Include OS-specific variables.
+  include_tasks: "{{ ansible_os_family }}.yml"
 
