@@ -1,76 +1,12 @@
 ---
-themes:
-    - adwaita-icon-theme
-    - albatross-gtk-theme
-    - mate-icon-theme-faenza
-    - faenza-icon-theme
-    - gnome-wise-icon-theme
-desktop_utilities:
-    - audacity
-    - anacron
-    - blueman
-    - bluez
-    - brasero
-    - bleachbit
-    - deja-dup
-    - evince
-    - gedit
-    - gnome-calculator
-    - gnome-disk-utility
-    - gnome-screenshot
-    - gparted
-    - rhythmbox
-    - simple-scan
-    - shotwell
-    - psensor
-    - vlc
-accessories:
-    - keepassxc
-    - gedit
-    - gimp
-    - imagemagick
-    - meld
-    - vim
-    - curl
-clients:
-    - firefox-esr
-    - filezilla
-    - thunderbird
-    - enigmail
-games:
-    - pcsxr
-graphics:
-    - eog
-    - gimp
-bash:
-    - bash-completion
-    - neofetch
-    - tree
-sys:
-    - bc
-    - binutils
-    - build-essential
-    - curl
-    - dnsutils
-    - dirmngr
-    - dmidecode
-    - git
-    - gnupg2
-    - htop
-    - iputils-ping
-    - lm-sensors
-    - lsof
-    - logrotate
-    - net-tools
-    - ntfs-3g
-    - openssh-client
-    - p7zip
-    - rsync
-    - smbclient
-    - tcpdump
-    - terminator
-    - usbutils
-    - unrar
-    - zip
-    - whois
-    - wget
+- name: Install packages
+  apt: name={{item}} state=present update_cache=true
+  with_items:
+       - ['{{ themes }}']
+       - ['{{ desktop_utilities }}']
+       - ['{{ accessories }}']
+       - ['{{ clients }}']
+       - ['{{ games }}']
+       - ['{{ bash }}']
+       - ['{{ sys }}']
+
