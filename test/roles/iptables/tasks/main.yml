@@ -1,0 +1,35 @@
+---
+- name: iptables install package
+  pacman:
+    name: iptables
+    state: present
+
+- name: iptables service enable
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  systemd:
+    name: iptables
+    state: started
+    enabled: yes
+
+- name: Set the policy for the INPUT chain to DROP
+  iptables:
+    chain: INPUT
+    policy: DROP
+
+- name: Allow related and established connections
+  iptables:
+    chain: INPUT
+    ctstate: ESTABLISHED,RELATED
+    jump: ACCEPT
+
+- name: Allow loopback
+  iptables:
+    chain: INPUT
+    in_interface: lo
+    jump: ACCEPT
+
+- name: Save iptables rules
+  shell:  /usr/bin/iptables-save -f /etc/iptables/iptables.rules

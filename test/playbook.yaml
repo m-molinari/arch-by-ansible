@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+  become: yes
+  become_user: root
+  roles:
+    - iptables
+    - packages
+      #    - yay
+      #- services
+      #- rsyslog
+   - { role: yay, when: ansible_distribution == "Archlinux" }

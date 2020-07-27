@@ -1,0 +1,30 @@
+---
+- name: install package rsyslog
+  become_user: ser
+  shell: yay --noconfirm -S rsyslog
+
+- name: configuring rsyslog
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  copy:
+    src: files/rsyslog.conf
+    dest: /etc/rsyslog.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - restart rsyslog
+
+- name: make configuration directory
+  file:
+    name: /etc/rsyslog.d/
+    state: directory
+
+- name: enable service rsyslog
+  systemd:
+    name: rsyslog
+    state: started
+    enabled: yes
+
