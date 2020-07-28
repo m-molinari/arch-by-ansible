@@ -4,8 +4,11 @@
   become: yes
   become_user: root
   roles:
-   - packages
    - iptables
+  # Archlinux
    - { role: "yay", when: (ansible_distribution == 'Archlinux') }
    - { role: "rsyslog", when: (ansible_distribution == 'Archlinux') }
    - { role: "services", when: (ansible_distribution == 'Archlinux') }
+   - { role: "pacman", when: (ansible_distribution == 'Archlinux') }
+  # Debian
+   - { role: "apt", when: (ansible_distribution == 'Debian') }
