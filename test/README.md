@@ -1,2 +1,2 @@
-# Ansible playbok for config Arch Linux
-Collection of roles for configure Arch linux
+# Ansible playbok for config Debian and Archlinux
+Collection of roles for configure Debian and Arch linux
