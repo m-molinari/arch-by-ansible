@@ -8,6 +8,7 @@ list_of_packages:
     - go-mtpfs-git
     - google-chrome
     - iso-flag-png
+    - kazam
     - jmtpfs
     - maia-icon-theme
     - openshot
