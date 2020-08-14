@@ -19,6 +19,7 @@ desktop_utilities:
     - gnome-disk-utility
     - gnome-screenshot
     - gparted
+    - kazam
     - rhythmbox
     - simple-scan
     - shotwell
