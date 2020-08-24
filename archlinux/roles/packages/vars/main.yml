@@ -94,6 +94,7 @@ sys:
     - net-tools
     - netctl
     - openssh
+    - pacman-contrib
     - rsync
     - smbclient
     - smartmontools
