@@ -91,6 +91,7 @@ sys:
     - htop
     - lsof
     - linux-lts
+    - mlocate
     - net-tools
     - netctl
     - openssh
