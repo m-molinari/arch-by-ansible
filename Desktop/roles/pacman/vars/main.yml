@@ -99,6 +99,7 @@ sys:
     - rsync
     - smbclient
     - smartmontools
+    - sslscan
     - tcpdump
     - terminator
     - usbutils
