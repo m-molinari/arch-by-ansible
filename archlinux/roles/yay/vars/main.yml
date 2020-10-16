@@ -1,5 +1,6 @@
 ---
 list_of_packages:
+    - apache-tools
     - arch-silence-grub-theme-git
     - audio-recorder
     - audacity
