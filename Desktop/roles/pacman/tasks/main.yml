@@ -19,3 +19,4 @@
     - "{{ sys }}" 
     - "{{ dev }}" 
     - "{{ video }}"
+    - "{{ astronomy }}"
