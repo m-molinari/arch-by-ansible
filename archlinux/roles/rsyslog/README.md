@@ -11,7 +11,7 @@ Requirements
 
 Dependencies
 ------------
-roles/yay
+roles/paru
 
 Example Playbook
 ----------------

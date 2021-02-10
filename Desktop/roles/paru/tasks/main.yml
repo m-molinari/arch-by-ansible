@@ -1,0 +1,11 @@
+---
+- name: Clone paru repository
+  git: repo=https://aur.archlinux.org/paru.git dest=/tmp/paru/ accept_hostkey=yes update=yes
+
+- name: Create package
+  shell: cd /tmp/paru && makepkg -si --noconfirm
+
+- name: Install paru packages
+  shell: paru --noconfirm -S {{ item }}
+  with_items:
+    - "{{ list_of_packages }}" 

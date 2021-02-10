@@ -6,6 +6,6 @@
   roles:
     - iptables
     - packages
-    - yay
+    - paru
     - services
     - rsyslog

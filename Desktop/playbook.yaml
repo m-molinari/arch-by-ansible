@@ -6,7 +6,7 @@
   roles:
    - iptables
   # Archlinux
-   - { role: "yay", when: (ansible_distribution == 'Archlinux') }
+   - { role: "paru", when: (ansible_distribution == 'Archlinux') }
    - { role: "rsyslog", when: (ansible_distribution == 'Archlinux') }
    - { role: "services", when: (ansible_distribution == 'Archlinux') }
    - { role: "pacman", when: (ansible_distribution == 'Archlinux') }
