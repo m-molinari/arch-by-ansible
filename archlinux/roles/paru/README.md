@@ -7,4 +7,10 @@ took a lot of inspiration from https://github.com/lgaggini/ansible-arch/blob/mas
 
 You can define a list of packages in vars/main.yaml to adapt role to your needs
 
+You must change user attributes (name and home path) in vars/main.yaml :
+
+user:
+  name: you
+  home: /home/you
+
 

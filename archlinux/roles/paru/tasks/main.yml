@@ -1,11 +1,22 @@
 ---
+- name: Install required packages
+  pacman:
+    name: --needed base-devel
+    state: present
+
 - name: Clone paru repository
-  git: repo=https://aur.archlinux.org/paru.git dest=/tmp/paru/ accept_hostkey=yes update=yes
+  become: yes
+  become_method: su
+  become_user: "{{ user.name }}"
+  git: repo=https://aur.archlinux.org/paru.git dest={{ user.home }}/paru_tmp/ accept_hostkey=yes update=yes
 
-- name: Create package
-  shell: cd /tmp/paru && makepkg -si --noconfirm
+- name: Create binary
+  become: yes
+  become_method: su
+  become_user: "{{ user.name }}"
+  shell: cd {{ user.home }}/paru_tmp/  && makepkg -si --noconfirm
 
-- name: Install paru packages
+- name: Install paru packages list
   shell: paru --noconfirm -S {{ item }}
   with_items:
     - "{{ list_of_packages }}" 

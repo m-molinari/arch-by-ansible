@@ -1,4 +1,8 @@
 ---
+user:
+  name: you
+  home: /home/you
+
 list_of_packages:
     - apache-tools
     - arch-silence-grub-theme-git
