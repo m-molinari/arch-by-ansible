@@ -10,10 +10,12 @@ took a lot of inspiration from https://github.com/lgaggini/ansible-arch/blob/mas
 list_of_packages:
     - arch-silence-grub-theme-git
     - audio-recorder
+    ```
 - You must change user attributes (name and home path) in vars/main.yaml :
 ```bash
 user:
   name: you
   home: /home/you
+```
 
 
