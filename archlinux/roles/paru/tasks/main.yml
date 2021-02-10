@@ -5,18 +5,16 @@
     state: present
 
 - name: Clone paru repository
-  become: yes
-  become_method: su
   become_user: "{{ user.name }}"
   git: repo=https://aur.archlinux.org/paru.git dest={{ user.home }}/paru_tmp/ accept_hostkey=yes update=yes
 
 - name: Create binary
-  become: yes
-  become_method: su
   become_user: "{{ user.name }}"
   shell: cd {{ user.home }}/paru_tmp/  && makepkg -si --noconfirm
 
-- name: Install paru packages list
+- name: Install paru packages
+  become: yes
+  become_user: "{{ user.name }}"
   shell: paru --noconfirm -S {{ item }}
   with_items:
-    - "{{ list_of_packages }}" 
+    - "{{ list_of_packages }}"
