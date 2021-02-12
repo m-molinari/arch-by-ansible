@@ -4,6 +4,7 @@
   become: yes
   become_user: root
   roles:
+    - config
     - iptables
     - packages
     - paru

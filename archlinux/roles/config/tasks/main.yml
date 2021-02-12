@@ -1,0 +1,10 @@
+---
+# tasks file for config
+- name: Copy file for disabling beep in terminal
+  copy:
+     src: nobeep.conf
+     dest: /etc/modprobe.d/nobeep.conf
+     owner: root
+     group: root
+     mode: '0644'
+
