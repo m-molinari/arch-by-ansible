@@ -22,10 +22,10 @@
     - ['{{ astronomy }}']
 
 - name: Create xinitrc file
- copy:
+  copy:
     src: files/xinitrc
-    dest: {{ user.home }}/.xinitrc
-    owner: {{ user.name }}
-    group: {{ user.name }}
+    dest: "{{ user.home }}/.xinitrc"
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
     mode: '0644'
 
