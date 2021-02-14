@@ -6,9 +6,9 @@
     - ['{{ kernel }}']
     - ['{{ drivers }}']
     - ['{{ lib }}']
+    - ['{{ Xorg }}']
     - ['{{ display_manager }}']
     - ['{{ desktop_env }}']
-    - ['{{ themes }}']
     - ['{{ desktop_utilities }}']
     - ['{{ accessories }}']
     - ['{{ clients }}']
@@ -20,3 +20,12 @@
     - ['{{ dev }}']
     - ['{{ video }}']
     - ['{{ astronomy }}']
+
+- name: Create xinitrc file
+ copy:
+    src: files/xinitrc
+    dest: {{ user.home }}/.xinitrc
+    owner: {{ user.name }}
+    group: {{ user.name }}
+    mode: '0644'
+

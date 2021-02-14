@@ -23,15 +23,17 @@ lib:
     - python-configobj
 display_manager:
     - lightdm
+Xorg:
+    - xorg-server
+    - xorg-xinit
+    - xf86-input-synaptics
+    - xf86-input-libinput
 desktop_env:
     - cinnamon
     - nemo
     - nemo-fileroller
     - nemo-share
     - nemo-seahorse
-themes:
-    - mint-themes
-    - mint-x-icons
 desktop_utilities:
     - baobab
     - brasero
