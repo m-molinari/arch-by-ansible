@@ -8,7 +8,7 @@
     - ['{{ lib }}']
     - ['{{ Xorg }}']
     - ['{{ display_manager }}']
-    - ['{{ desktop_env }}']
+    - ['{{ cinnamon }}']
     - ['{{ desktop_utilities }}']
     - ['{{ accessories }}']
     - ['{{ clients }}']

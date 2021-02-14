@@ -28,7 +28,7 @@ Xorg:
     - xorg-xinit
     - xf86-input-synaptics
     - xf86-input-libinput
-desktop_env:
+cinnamon:
     - cinnamon
     - nemo
     - nemo-fileroller
