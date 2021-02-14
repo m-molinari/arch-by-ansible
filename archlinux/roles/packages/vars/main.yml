@@ -63,8 +63,6 @@ clients:
     - thunderbird
     - thunderbird-extension-enigmail
     - transmission-gtk
-games:
-    - pcsxr
 file_system:
     - cifs-utils
     - libmtp
