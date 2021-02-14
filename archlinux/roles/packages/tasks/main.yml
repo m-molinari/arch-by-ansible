@@ -1,22 +1,22 @@
 ---
 - name: Install packages
-  pacman: "{{ item }}"
+  pacman: name={{ item }} state=present
   with_items:
-    - "{{ grub }}" 
-    - "{{ kernel }}"
-    - "{{ drivers }}" 
-    - "{{ lib }}"
-    - "{{ display_manager }}" 
-    - "{{ desktop_env }}" 
-    - "{{ themes }}" 
-    - "{{ desktop_utilities }}" 
-    - "{{ accessories }}" 
-    - "{{ clients }}" 
-    - "{{ games }}" 
-    - "{{ file_system }}" 
-    - "{{ graphics }}" 
-    - "{{ bash }}" 
-    - "{{ sys }}" 
-    - "{{ dev }}" 
-    - "{{ video }}"
-    - "{{ astronomy }}"
+    - ['{{ grub }}']
+    - ['{{ kernel }}']
+    - ['{{ drivers }}']
+    - ['{{ lib }}']
+    - ['{{ display_manager }}']
+    - ['{{ desktop_env }}']
+    - ['{{ themes }}']
+    - ['{{ desktop_utilities }}']
+    - ['{{ accessories }}']
+    - ['{{ clients }}']
+    - ['{{ games }}']
+    - ['{{ file_system }}']
+    - ['{{ graphics }}']
+    - ['{{ bash }}']
+    - ['{{ sys }}']
+    - ['{{ dev }}']
+    - ['{{ video }}']
+    - ['{{ astronomy }}']
