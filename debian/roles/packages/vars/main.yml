@@ -47,6 +47,9 @@ bash:
     - bash-completion
     - neofetch
     - tree
+fonts:
+    - fonts-cantarell
+    - fonts-hack
 sys:
     - bc
     - binutils

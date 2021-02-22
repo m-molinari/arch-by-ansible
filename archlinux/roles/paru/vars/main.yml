@@ -12,6 +12,8 @@ list_of_packages:
     - kazam
     - jmtpfs
     - maia-icon-theme
+    - nerd-fonts-hack
+    - cantarell-fonts
     - openshot
     - papirus-maia-icon-theme-git
     - mint-themes
