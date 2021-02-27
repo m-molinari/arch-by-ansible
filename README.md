@@ -2,6 +2,7 @@
 Collection of system tools managed by ansible
 
 # Basic Arch Installtion commands :
+```bash
 
 loadkeys it  
 
@@ -48,9 +49,15 @@ passwd user
 
 pacman -S xorg-server xorg-xinit xorg-utils xorg-server-utils mesa xf86-input-synaptics  
 
+```
+
 # Virtualbox
+```bash
+
 pacman -S virtualbox-guest-utils virtualbox-guest-dkms virtualbox-guest-iso virtualbox-host-dkms  
 systemctl enable vboxservice.service   
-modprobe -a vboxguest vboxsf vboxvideo  
+modprobe -a vboxguest vboxsf vboxvideo 
+
+```
 
 
