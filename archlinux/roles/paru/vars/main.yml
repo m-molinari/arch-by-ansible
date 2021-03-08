@@ -21,3 +21,4 @@ list_of_packages:
     - ttf-ms-fonts
     - simplescreenrecorder
     - whatsapp-nativefier
+    - xcursor-breeze
