@@ -6,7 +6,7 @@
   roles:
     - config
     - iptables
-    - packages
+    - pacman
     - paru
     - services
     - rsyslog
