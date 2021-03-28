@@ -23,6 +23,7 @@ lib:
     - python-configobj
 display_manager:
     - lightdm
+    - lightdm-gtk-greeter
 Xorg:
     - xorg-server
     - xorg-xinit
