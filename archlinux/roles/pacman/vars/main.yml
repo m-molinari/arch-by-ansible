@@ -24,6 +24,7 @@ lib:
 display_manager:
     - lightdm
     - lightdm-gtk-greeter
+    - lightdm-gtk-greeter-settings
 Xorg:
     - xorg-server
     - xorg-xinit
