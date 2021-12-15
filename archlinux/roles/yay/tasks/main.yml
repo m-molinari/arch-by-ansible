@@ -1,0 +1,11 @@
+---
+- name: Clone yay repository
+  git: repo=https://aur.archlinux.org/yay.git dest=/tmp/yay/ accept_hostkey=yes update=yes
+
+- name: Create package
+  shell: cd /tmp/yay && makepkg -si --noconfirm
+
+- name: Install aur packages
+  shell: yay --noconfirm -S {{ item }}
+  with_items:
+    - "{{ list_of_packages }}" 

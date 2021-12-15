@@ -7,6 +7,6 @@
     - config
     - iptables
     - pacman
-    - paru
+    - yay
     - services
     - rsyslog
