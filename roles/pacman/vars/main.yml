@@ -53,6 +53,7 @@ desktop_utilities:
     - gsmartcontrol
     - libreoffice-fresh
     - simple-scan
+    - system-config-printer
 accessories:
     - keepassxc
     - gedit
