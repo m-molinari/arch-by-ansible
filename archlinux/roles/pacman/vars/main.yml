@@ -41,6 +41,8 @@ desktop_utilities:
     - brasero
     - bluez
     - blueman
+    - cups
+    - cups-filters
     - deja-dup
     - evince
     - gnome-calculator
