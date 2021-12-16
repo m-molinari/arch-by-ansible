@@ -1,7 +1,7 @@
 ---
 - name: install package rsyslog
   become_user: "{{ user.name }}"
-  shell: paru --noconfirm -S rsyslog
+  shell: yay --noconfirm -S rsyslog
 
 - name: configuring rsyslog
   become: yes
