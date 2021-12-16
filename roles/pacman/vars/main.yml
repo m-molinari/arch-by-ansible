@@ -36,6 +36,7 @@ cinnamon:
     - nemo-fileroller
     - nemo-share
     - nemo-seahorse
+    - xcursor-breeze
 desktop_utilities:
     - baobab
     - brasero
@@ -67,6 +68,7 @@ clients:
     - filezilla
     - thunderbird
     - transmission-gtk
+    - realvnc-vnc-viewer
 file_system:
     - cifs-utils
     - libmtp
