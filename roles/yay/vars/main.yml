@@ -14,10 +14,11 @@ list_of_packages:
     - jmtpfs
     - kazam
     - maia-icon-theme
-    - openshot
-    - papirus-maia-icon-theme-git
     - mint-themes
     - mint-x-icons
-    - ttf-ms-fonts
+    - openshot
+    - papirus-maia-icon-theme-git
+    - realvnc-vnc-viewer
     - simplescreenrecorder
-    - whatsapp-nativefier
+    - ttf-ms-fonts
+    - xcursor-breeze
