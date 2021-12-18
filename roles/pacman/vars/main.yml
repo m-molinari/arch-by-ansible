@@ -91,6 +91,7 @@ sys:
     - bind-tools
     - dialog
     - docker
+    - fakeroot
     - git
     - keychain
     - htop
