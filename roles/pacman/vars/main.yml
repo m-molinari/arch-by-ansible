@@ -36,7 +36,6 @@ cinnamon:
     - nemo-fileroller
     - nemo-share
     - nemo-seahorse
-    - xcursor-breeze
 desktop_utilities:
     - baobab
     - brasero
