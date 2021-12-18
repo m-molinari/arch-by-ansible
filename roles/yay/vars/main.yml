@@ -2,6 +2,7 @@
 list_of_packages:
     - apache-tools
     - arc-gtk-theme
+    - arc-icon-theme
     - arch-silence-grub-theme-git
     - arch-logo-dark-wallpapers
     - audio-recorder
@@ -14,8 +15,6 @@ list_of_packages:
     - jmtpfs
     - kazam
     - maia-icon-theme
-    - mint-themes
-    - mint-x-icons
     - openshot
     - papirus-maia-icon-theme-git
     - realvnc-vnc-viewer
