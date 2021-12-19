@@ -93,6 +93,7 @@ sys:
     - docker
     - fakeroot
     - git
+    - gnome-terminal
     - keychain
     - htop
     - lsof
