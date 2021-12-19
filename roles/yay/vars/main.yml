@@ -16,6 +16,7 @@ list_of_packages:
     - kazam
     - maia-icon-theme
     - openshot
+    - papirus-icon-theme
     - papirus-maia-icon-theme-git
     - realvnc-vnc-viewer
     - simplescreenrecorder
