@@ -96,6 +96,7 @@ sys:
     - gnome-terminal
     - keychain
     - htop
+    - inetutils 
     - lsof
     - linux-lts
     - man-db
