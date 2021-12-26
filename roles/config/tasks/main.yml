@@ -8,3 +8,22 @@
      group: root
      mode: '0644'
 
+- name: get value
+  shell:
+    cmd: lspci  | grep -ic RTL8723BE
+  register: grep_output
+  ignore_errors: yes
+  changed_when: false
+
+- name: Print
+  debug:
+    var="grep_output.stdout_lines"
+
+- name: Copy config file for RTL8723BE Wifi adapter
+  copy:
+     src: rtl8723be.conf
+     dest: /etc/modprobe.d/rtl8723be.conf
+     owner: root
+     group: root
+     mode: '0644'
+  when: grep_output.stdout == '1'
