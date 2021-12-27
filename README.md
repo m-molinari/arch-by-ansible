@@ -8,3 +8,5 @@ https://github.com/m-molinari/arch-by-ansible/blob/master/group_vars/all
 
 You can find basic initial installation commands for Arch Linux here:
 https://gist.github.com/m-molinari/be93633337110b529cff38f1aab96e66
+
+You must install fakeroot for rsyslog and yay roles
