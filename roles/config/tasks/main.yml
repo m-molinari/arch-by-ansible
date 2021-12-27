@@ -27,3 +27,18 @@
      group: root
      mode: '0644'
   when: grep_output.stdout == '1'
+
+- name: Check ILoveCandy in pacman.conf
+  shell:
+    cmd: grep -ic ILoveCandy /etc/pacman.conf
+  register: grep_candy
+  ignore_errors: true
+  changed_when: false
+  failed_when: grep_candy.rc not in [ 0, 1 ]
+
+- name: addline
+  lineinfile:
+    dest: "/etc/pacman.conf"
+    insertafter: '\[options\]'
+    line: "ILoveCandy # pacman on shell"
+  when: grep_candy.stdout == '0'
