@@ -15,6 +15,7 @@ list_of_packages:
     - jmtpfs
     - kazam
     - maia-icon-theme
+    - mint-themes
     - openshot
     - papirus-icon-theme
     - papirus-maia-icon-theme-git
