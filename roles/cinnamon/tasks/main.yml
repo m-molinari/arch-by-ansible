@@ -8,7 +8,6 @@
     - ['{{ clients }}']
     - ['{{ graphics }}']
     - ['{{ video }}']
-    - ['{{ astronomy }}']
 
 - name: Create xinitrc file
   copy:
