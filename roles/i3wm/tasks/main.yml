@@ -1,0 +1,13 @@
+---
+- name: Install packages
+  pacman: name={{ item }} state=present
+  with_items:
+    - ['{{ i3wm }}']
+
+- name: Create xinitrc file
+  copy:
+    src: files/xinitrc
+    dest: "{{ user.home }}/.xinitrc"
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
+    mode: '0644'

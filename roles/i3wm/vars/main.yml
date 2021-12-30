@@ -1,0 +1,16 @@
+---
+i3wm:
+    - i3-wm
+    - i3lock
+    - i3status
+    - i3blocks
+    - dmenu
+    - nitrogen
+    - feh
+    - ttf-font-awesome
+    - ttf-droid
+    - picom
+    - arandr
+    - rofi
+    - playerctl
+    - alsa-utils
