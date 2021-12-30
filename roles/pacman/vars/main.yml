@@ -58,6 +58,7 @@ sys:
     - linux-lts
     - man-db
     - mlocate
+    - ncdu
     - net-tools
     - netctl
     - openssh
