@@ -21,53 +21,13 @@ lib:
     - libdvdcss
     - libdvdnav
     - python-configobj
-display_manager:
-    - lightdm
-    - lightdm-gtk-greeter
-    - lightdm-gtk-greeter-settings
 Xorg:
     - xorg-server
     - xorg-xinit
     - xf86-input-synaptics
     - xf86-input-libinput
-cinnamon:
-    - cinnamon
-    - nemo
-    - nemo-fileroller
-    - nemo-share
-    - nemo-seahorse
-desktop_utilities:
-    - baobab
-    - brasero
-    - bluez
-    - blueman
-    - cups
-    - cups-filters
-    - deja-dup
-    - evince
-    - gnome-calculator
-    - gnome-disk-utility
-    - gnome-screenshot
-    - gnome-keyring
-    - gparted
-    - gsmartcontrol
-    - libreoffice-fresh
-    - simple-scan
-    - system-config-printer
-accessories:
-    - keepassxc
-    - gedit
-    - meld
-    - mplayer
-    - seahorse
+editor:
     - vim
-    - curl
-clients:
-    - firefox
-    - filezilla
-    - thunderbird
-    - transmission-gtk
-    - realvnc-vnc-viewer
 file_system:
     - cifs-utils
     - libmtp
@@ -77,10 +37,6 @@ file_system:
     - nfs-utils
     - ntfs-3g
     - samba
-graphics:
-    - eog
-    - gimp
-    - pinta
 bash:
     - bash-completion
     - neofetch
@@ -89,6 +45,7 @@ dev:
     - code
 sys:
     - bind-tools
+    - curl
     - dialog
     - docker
     - fakeroot
@@ -113,10 +70,3 @@ sys:
     - terminator
     - usbutils
     - whois
-video:
-    - vlc
-    - totem
-    - openshot
-astronomy:
-    - celestia
-    - stellarium

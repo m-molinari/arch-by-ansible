@@ -1,0 +1,50 @@
+---
+display_manager:
+    - lightdm
+    - lightdm-gtk-greeter
+    - lightdm-gtk-greeter-settings
+cinnamon:
+    - cinnamon
+    - nemo
+    - nemo-fileroller
+    - nemo-share
+    - nemo-seahorse
+applications:
+    - baobab
+    - brasero
+    - bluez
+    - blueman
+    - cups
+    - cups-filters
+    - deja-dup
+    - evince
+    - gnome-calculator
+    - gnome-disk-utility
+    - gnome-screenshot
+    - gnome-keyring
+    - gparted
+    - gsmartcontrol
+    - libreoffice-fresh
+    - simple-scan
+    - system-config-printer
+    - keepassxc
+    - gedit
+    - meld
+    - mplayer
+    - seahorse
+clients:
+    - firefox
+    - filezilla
+    - thunderbird
+    - transmission-gtk
+    - realvnc-vnc-viewer
+graphics:
+    - eog
+    - gimp
+video:
+    - vlc
+    - totem
+    - openshot
+astronomy:
+    - celestia
+    - stellarium

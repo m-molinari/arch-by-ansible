@@ -2,16 +2,13 @@
 - name: Install packages
   pacman: name={{ item }} state=present
   with_items:
-    - ['{{ grub }}']
-    - ['{{ kernel }}']
-    - ['{{ drivers }}']
-    - ['{{ lib }}']
-    - ['{{ Xorg }}']
-    - ['{{ editor }}']
-    - ['{{ file_system }}']
-    - ['{{ bash }}']
-    - ['{{ dev }}']
-    - ['{{ sys }}']
+    - ['{{ display_manager }}']
+    - ['{{ cinnamon }}']
+    - ['{{ applications }}']
+    - ['{{ clients }}']
+    - ['{{ graphics }}']
+    - ['{{ video }}']
+    - ['{{ astronomy }}']
 
 - name: Create xinitrc file
   copy:
