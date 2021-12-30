@@ -18,3 +18,21 @@ by default cinnamon will be installed :
 
   - cinnamon
  #- i3wm
+ 
+ # Roles
+ 
+| Role                    | Required | Default | Dependences       | Comments                                        |
+| ----------------------- | -------- | ------- | ----------------- | ----------------------------------------------- |
+| config                  | yes      | true    | ansible           | LoveCandy, wifi config, noobeep in terminal     |
+| iptables                | yes      | true    | ansible           | config firewall                                 |
+| pacman                  | yes      | true    | ansible           | Installing packages                             |
+| yay                     | yes      | true    | ansible, fakeroot | Installing yay and some packages                |
+| services                | yes      | true    | ansible           | config services (NetworkManager, cups ecc ...)  | 
+| rsyslog                 | yes      | true    | ansible, fakeroot | Installing and config syslog                    |
+| cinnamo                 | yes      | true    | ansible           | Installing DE Cinnamon                          |
+| i3wm                    | yes      | false   | ansible           | Installing WM i3wm                              |
+
+Install dependences in Archlinux
+```
+sudo pacman -S ansible fakeroot
+```
