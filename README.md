@@ -16,8 +16,10 @@ You must install fakeroot for rsyslog and yay roles
 You can choice if installing cinnamon desktop or i3wm by comment and uncomment in playbook roles
 by default cinnamon will be installed :
 
+```
   - cinnamon
- #- i3wm
+  #- i3wm
+```  
  
  # Roles
  
