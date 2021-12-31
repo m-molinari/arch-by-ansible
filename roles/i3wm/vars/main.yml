@@ -1,7 +1,6 @@
 ---
 i3wm:
     - i3-wm
-    - i3lock
     - i3status
     - i3blocks
     - dmenu
@@ -14,3 +13,5 @@ i3wm:
     - rofi
     - playerctl
     - alsa-utils
+i3wm-yay:
+    - i3lock-color
