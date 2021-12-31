@@ -5,6 +5,7 @@
     - ['{{ grub }}']
     - ['{{ kernel }}']
     - ['{{ drivers }}']
+    - ['{{ desktop }}']
     - ['{{ lib }}']
     - ['{{ Xorg }}']
     - ['{{ editor }}']

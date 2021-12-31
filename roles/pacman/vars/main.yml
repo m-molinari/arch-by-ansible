@@ -8,6 +8,8 @@ kernel:
     - linux-firmware
     - linux-lts
     - linux-lts-headers
+desktop:
+    - archlinux-wallpaper
 drivers:
     - hplip
     - xf86-video-nouveau
