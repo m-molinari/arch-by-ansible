@@ -1,18 +1,19 @@
 ---
 i3wm:
+    - alsa-utils
+    - arandr
+    - dmenu
+    - feh
     - i3-wm
     - i3status
     - i3blocks
-    - dmenu
     - nitrogen
-    - feh
+    - nm-connection-editor
+    - picom
+    - playerctl
+    - rofi
     - ttf-font-awesome
     - ttf-droid
-    - picom
-    - arandr
-    - rofi
-    - playerctl
-    - alsa-utils
 
 i3wm_yay:
     - i3lock-color
