@@ -15,6 +15,6 @@
 - name: Clone a github repository
   git:
     repo: https://github.com/vivien/i3blocks-contrib
-    dest: "{{ user.home }}/.config/"
+    dest: "{{ user.home }}/.config/i3blocks-contrib"
     clone: yes
     update: yes
