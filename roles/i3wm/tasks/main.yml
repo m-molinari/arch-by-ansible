@@ -9,7 +9,7 @@
   become: yes
   become_user: "{{ user.name }}"
   with_items:
-    - "{{ i3wm-yay }}"
+    - "{{ i3wm_yay }}"
 
 - name: Create xinitrc file
   copy:

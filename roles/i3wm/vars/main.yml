@@ -13,5 +13,6 @@ i3wm:
     - rofi
     - playerctl
     - alsa-utils
-i3wm-yay:
+
+i3wm_yay:
     - i3lock-color
