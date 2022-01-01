@@ -7,8 +7,10 @@ i3wm:
     - i3-wm
     - i3status
     - i3blocks
+    - mate-backgrounds
     - nitrogen
     - nm-connection-editor
+    - nemo
     - picom
     - playerctl
     - rofi
