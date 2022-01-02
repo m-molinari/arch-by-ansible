@@ -1,21 +1,37 @@
 ---
 i3wm:
+    # volume control
     - alsa-utils
+    # screen manage
     - arandr
+    # application menu
     - dmenu
+    # wallpaper
     - feh
+    # i3wm
     - i3-wm
     - i3status
     - i3blocks
+    # wallpaper
     - mate-backgrounds
+    # screenshots
+    - maim
+    - xclip
+    # wallpaper manager
     - nitrogen
+    # network connection manager
     - nm-connection-editor
+    # file manager
     - nemo
+    # compositor
     - picom
+    # audio manager
     - playerctl
     - rofi
+    # fonts
     - ttf-font-awesome
     - ttf-droid
 
 i3wm_yay:
+    # lock screen
     - i3lock-color
