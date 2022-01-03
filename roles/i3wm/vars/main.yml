@@ -33,6 +33,8 @@ i3wm:
     - playerctl
     # polkit root gui app
     - polkit-gnome
+    # terminal file manager
+    - ranger
     - rofi
     # fonts
     - ttf-font-awesome
