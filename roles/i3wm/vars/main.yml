@@ -43,6 +43,8 @@ i3wm:
     - volumeicon
     - xterm
     - rxvt-unicode
+    # autolock
+    - xautolock
     # battery level
     - xfce4-power-manager
     # brightness manage
