@@ -23,6 +23,8 @@ i3wm:
     - nitrogen
     # network connection manager
     - nm-connection-editor
+    # themes and aspect
+    - lxappearance
     # file manager
     - nemo
     # compositor
@@ -38,6 +40,7 @@ i3wm:
     # control volume by gui
     - volumeicon
     - xterm
+    - rxvt-unicode
     # battery level
     - xfce4-power-manager
     # brightness manage
