@@ -43,3 +43,18 @@
     mode: '0644'
   when: grep_intel_backlight.stdout == '1'
 
+- name: Creates directory xorg.conf.d in /etc/X11/
+  file:
+    path: /etc/X11/xorg.conf.d
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Copy 90-touchpad.conf in /etc/X11/xorg.conf.d/
+  copy:
+    src: files/90-touchpad.conf
+    dest: /etc/X11/xorg.conf.d
+    owner: root
+    group: root
+    mode: '0644'
