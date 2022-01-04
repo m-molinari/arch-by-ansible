@@ -48,7 +48,8 @@ i3wm:
     # battery level
     - xfce4-power-manager
     # brightness manage
-    - xorg-xbacklight
+    - acpilight
+ #   - xorg-xbacklight
 
 i3wm_yay:
     # lock screen
