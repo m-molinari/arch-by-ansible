@@ -51,6 +51,7 @@ sys:
     - dialog
     - docker
     - fakeroot
+    - geoip
     - git
     - gnome-terminal
     - keychain
