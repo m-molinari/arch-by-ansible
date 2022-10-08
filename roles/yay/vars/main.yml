@@ -17,8 +17,6 @@ list_of_packages:
     - maia-icon-theme
     - mint-themes
     - openshot
-    - papirus-icon-theme
-    - papirus-maia-icon-theme-git
     - realvnc-vnc-viewer
     - simplescreenrecorder
     - ttf-ms-fonts
