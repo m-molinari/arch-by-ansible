@@ -36,9 +36,25 @@
   changed_when: false
   failed_when: grep_candy.rc not in [ 0, 1 ]
 
-- name: addline
+- name: addline ILoveCandy
   lineinfile:
     dest: "/etc/pacman.conf"
     insertafter: '\[options\]'
-    line: "ILoveCandy # pacman on shell"
+    line: "ILoveCandy"
   when: grep_candy.stdout == '0'
+
+- name: Check Color in pacman.conf
+  shell:
+    cmd: grep ^Color -c /etc/pacman.conf
+  register: grep_color
+  ignore_errors: true
+  changed_when: false
+  failed_when: grep_color.rc not in [ 0, 1 ]
+
+- name: addline Color
+  lineinfile:
+    dest: "/etc/pacman.conf"
+    insertafter: '\[options\]'
+    line: "Color"
+  when: grep_color.stdout == '0'
+
