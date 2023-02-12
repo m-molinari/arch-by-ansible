@@ -1,7 +1,7 @@
 ---
 - name: Install required packages
   pacman:
-    name: --needed base-devel
+    name: base-devel
     state: present
 
 - name: Clone paru repository
