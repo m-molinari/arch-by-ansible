@@ -1,7 +1,11 @@
 ---
 list_of_packages:
+
     - apache-tools
+    - arc-gtk-theme
+    - arc-icon-theme
     - arch-silence-grub-theme-git
+    - arch-logo-dark-wallpapers
     - audio-recorder
     - audacity
     - cherrytree
@@ -9,16 +13,10 @@ list_of_packages:
     - go-mtpfs-git
     - google-chrome
     - iso-flag-png
-    - kazam
     - jmtpfs
-    - maia-icon-theme
-    - nerd-fonts-hack
-    - cantarell-fonts
+    - kazam
     - openshot
-    - papirus-maia-icon-theme-git
-    - mint-themes
-    - mint-x-icons
-    - ttf-ms-fonts
+    - realvnc-vnc-viewer
     - simplescreenrecorder
-    - whatsapp-nativefier
+    - ttf-ms-fonts
     - xcursor-breeze
