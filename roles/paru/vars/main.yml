@@ -1,7 +1,5 @@
 ---
 list_of_packages:
-
-    - apache-tools
     - arc-gtk-theme
     - arc-icon-theme
     - arch-silence-grub-theme-git
