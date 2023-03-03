@@ -6,8 +6,8 @@ grub:
 kernel:
     - linux
     - linux-firmware
-    - linux-lts
-    - linux-lts-headers
+#    - linux-lts
+#    - linux-lts-headers
 desktop:
     - archlinux-wallpaper
 drivers:
@@ -53,12 +53,11 @@ sys:
     - fakeroot
     - geoip
     - git
-    - gnome-terminal
+    #- gnome-terminal
     - keychain
     - htop
     - inetutils 
     - lsof
-    - linux-lts
     - man-db
     - mlocate
     - ncdu
