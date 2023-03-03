@@ -9,8 +9,8 @@
     state: started
     enabled: yes
 
-  systemd:
-    name: cups-browsed.service
-    state: started
-    enabled: yes
+ # systemd:
+ #   name: cups-browsed.service
+ #   state: started
+ #   enabled: yes
 
