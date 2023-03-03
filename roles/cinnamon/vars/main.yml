@@ -37,7 +37,6 @@ clients:
     - filezilla
     - thunderbird
     - transmission-gtk
-    - realvnc-vnc-viewer
 graphics:
     - eog
     - gimp
