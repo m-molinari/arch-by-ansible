@@ -14,6 +14,8 @@ i3wm:
     - i3-wm
     - i3status
     - i3blocks
+    # driver
+    - libinput
     # wallpaper
     - mate-backgrounds
     # screenshots
