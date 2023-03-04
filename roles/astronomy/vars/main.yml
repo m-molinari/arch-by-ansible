@@ -1,6 +1,6 @@
 ---
 astronomy:
     - celestia
-    - kstars
+    #- kstars
     - gwenview
     - stellarium
