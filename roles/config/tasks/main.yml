@@ -1,5 +1,8 @@
 ---
 # tasks file for config
+
+# Disable Beep in terminal
+#
 - name: Copy file for disabling beep in terminal
   copy:
      src: nobeep.conf
@@ -8,6 +11,8 @@
      group: root
      mode: '0644'
 
+# Config RTL8723BE Wifi adapter
+#
 - name: get value
   shell:
     cmd: lspci  | grep -ic RTL8723BE
@@ -28,6 +33,8 @@
      mode: '0644'
   when: grep_output.stdout == '1'
 
+# ILoveCandy pacman instead #
+#
 - name: Check ILoveCandy in pacman.conf
   shell:
     cmd: grep -ic ILoveCandy /etc/pacman.conf
@@ -43,6 +50,8 @@
     line: "ILoveCandy"
   when: grep_candy.stdout == '0'
 
+# Color pacman
+#
 - name: Check Color in pacman.conf
   shell:
     cmd: grep ^Color -c /etc/pacman.conf
@@ -58,3 +67,19 @@
     line: "Color"
   when: grep_color.stdout == '0'
 
+# Configure MAKEFLAGS with current numbers of CPU
+#
+- name: MAKEFLAGS in /etc/makepkg.conf
+  shell:
+    cmd: grep -c ^MAKEFLAGS /etc/makepkg.conf
+  register: grep_makeflags
+  ignore_errors: true
+  changed_when: false
+  failed_when: grep_makeflags.rc not in [ 0, 1 ]
+
+- name: addline MAKEFLAGS
+  lineinfile:
+    dest: "/etc/makepkg.conf"
+    insertafter: '^#MAKEFLAGS=*'
+    line: MAKEFLAGS="-j{{ansible_processor_nproc}}"
+  when: grep_makeflags.stdout == '0'
