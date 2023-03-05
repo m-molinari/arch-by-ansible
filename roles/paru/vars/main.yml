@@ -4,7 +4,6 @@ list_of_packages:
     - arc-icon-theme
     - arch-silence-grub-theme-git
     - arch-logo-dark-wallpapers
-    - apache-tools
     - audio-recorder
     - audacity
     - cherrytree
