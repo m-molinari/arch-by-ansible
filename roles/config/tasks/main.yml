@@ -11,6 +11,16 @@
      group: root
      mode: '0644'
 
+# Configure swappiness
+#
+- name: Copy file for swappiness
+  copy:
+     src: 99-swappiness.conf
+     dest: /etc/sysctl.d/99-swappiness.conf
+     owner: root
+     group: root
+     mode: '0644'
+
 # Config RTL8723BE Wifi adapter
 #
 - name: get value
