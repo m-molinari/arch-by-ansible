@@ -4,6 +4,7 @@ list_of_packages:
     - arc-icon-theme
     - arch-silence-grub-theme-git
     - arch-logo-dark-wallpapers
+    - apache-tools
     - audio-recorder
     - audacity
     - cherrytree
@@ -13,7 +14,10 @@ list_of_packages:
     - iso-flag-png
     - jmtpfs
     - kazam
-    - openshot
+    - mint-themes-git
+    - mint-x-icons
+    #- openshot
+    - realvnc-vnc-viewer
     - simplescreenrecorder
     - ttf-ms-fonts
     - xcursor-breeze
