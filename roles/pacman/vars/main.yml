@@ -39,6 +39,8 @@ file_system:
     - nfs-utils
     - ntfs-3g
     - samba
+fonts:
+    - ttf-hack-nerd
 bash:
     - bash-completion
     - neofetch
