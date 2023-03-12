@@ -76,3 +76,6 @@ sys:
     - usbutils
     - whois
     - wget
+virtualbox:
+    - virtualbox
+    - virtualbox-host-modules-arch
