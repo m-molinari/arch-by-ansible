@@ -5,11 +5,11 @@
     - ['{{ i3wm }}']
 
 - name: Install aur packages
-  shell: yay --noconfirm -S {{ item }}
+  shell: paru --noconfirm -S {{ item }}
   become: yes
   become_user: "{{ user.name }}"
   with_items:
-    - "{{ i3wm_yay }}"
+    - "{{ i3wm_paru }}"
 
 - name: Create xinitrc file
   copy:
