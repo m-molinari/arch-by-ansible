@@ -59,6 +59,8 @@ sys:
     #- gnome-terminal
     - keychain
     - htop
+    - iftop
+    - iptraf-ng
     - inetutils 
     - lsof
     - man-db
