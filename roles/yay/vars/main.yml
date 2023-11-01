@@ -1,0 +1,22 @@
+---
+list_of_packages:
+    - arc-gtk-theme
+    - arc-icon-theme
+    - arch-silence-grub-theme-git
+    - arch-logo-dark-wallpapers
+    - audio-recorder
+    - audacity
+    - cherrytree
+    - dropbox
+    - go-mtpfs-git
+    - google-chrome
+    - iso-flag-png
+    - jmtpfs
+    - kazam
+    - mint-themes-git
+    - mint-x-icons
+    #- openshot
+    - realvnc-vnc-viewer
+    - simplescreenrecorder
+    - ttf-ms-fonts
+    - xcursor-breeze
