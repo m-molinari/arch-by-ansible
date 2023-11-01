@@ -1,30 +1,32 @@
 ---
-- name: install package rsyslog
-  become_user: "{{ user.name }}"
-  shell: paru --noconfirm -S rsyslog
-
-- name: configuring rsyslog
-  become: yes
-  become_user: root
-  become_method: sudo
-
-  copy:
-    src: files/rsyslog.conf
-    dest: /etc/rsyslog.conf
-    owner: root
-    group: root
-    mode: '0644'
-  notify:
-    - restart rsyslog
-
-- name: make configuration directory
-  file:
-    name: /etc/rsyslog.d/
-    state: directory
-
-- name: enable service rsyslog
-  systemd:
-    name: rsyslog
-    state: started
-    enabled: yes
-
+- name: rsyslog tasks
+  tags: rsyslog
+  block:
+  - name: install package rsyslog
+    become_user: "{{ user.name }}"
+    ansible.builtin.shell: paru --noconfirm -S rsyslog
+  
+  - name: configuring rsyslog
+    become: yes
+    become_user: root
+    become_method: sudo
+  
+    ansible.builtin.copy:
+      src: files/rsyslog.conf
+      dest: /etc/rsyslog.conf
+      owner: root
+      group: root
+      mode: '0644'
+    notify:
+      - restart rsyslog
+  
+  - name: make configuration directory
+    ansible.builtin.file:
+      name: /etc/rsyslog.d/
+      state: directory
+  
+  - name: enable service rsyslog
+    ansible.builtin.systemd:
+      name: rsyslog
+      state: started
+      enabled: yes

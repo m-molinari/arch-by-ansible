@@ -1,95 +1,97 @@
 ---
-# tasks file for config
+- name: config tasks
+  tags: config
+  block:
 
-# Disable Beep in terminal
-#
-- name: Copy file for disabling beep in terminal
-  copy:
-     src: nobeep.conf
-     dest: /etc/modprobe.d/nobeep.conf
-     owner: root
-     group: root
-     mode: '0644'
-
-# Configure swappiness
-#
-- name: Copy file for swappiness
-  copy:
-     src: 99-swappiness.conf
-     dest: /etc/sysctl.d/99-swappiness.conf
-     owner: root
-     group: root
-     mode: '0644'
-
-# Config RTL8723BE Wifi adapter
-#
-- name: get value
-  shell:
-    cmd: lspci  | grep -ic RTL8723BE
-  register: grep_output
-  ignore_errors: yes
-  changed_when: false
-
-- name: Print
-  debug:
-    var="grep_output.stdout_lines"
-
-- name: Copy config file for RTL8723BE Wifi adapter
-  copy:
-     src: rtl8723be.conf
-     dest: /etc/modprobe.d/rtl8723be.conf
-     owner: root
-     group: root
-     mode: '0644'
-  when: grep_output.stdout == '1'
-
-# ILoveCandy pacman instead #
-#
-- name: Check ILoveCandy in pacman.conf
-  shell:
-    cmd: grep -ic ILoveCandy /etc/pacman.conf
-  register: grep_candy
-  ignore_errors: true
-  changed_when: false
-  failed_when: grep_candy.rc not in [ 0, 1 ]
-
-- name: addline ILoveCandy
-  lineinfile:
-    dest: "/etc/pacman.conf"
-    insertafter: '\[options\]'
-    line: "ILoveCandy"
-  when: grep_candy.stdout == '0'
-
-# Color pacman
-#
-- name: Check Color in pacman.conf
-  shell:
-    cmd: grep ^Color -c /etc/pacman.conf
-  register: grep_color
-  ignore_errors: true
-  changed_when: false
-  failed_when: grep_color.rc not in [ 0, 1 ]
-
-- name: addline Color
-  lineinfile:
-    dest: "/etc/pacman.conf"
-    insertafter: '\[options\]'
-    line: "Color"
-  when: grep_color.stdout == '0'
-
-# Configure MAKEFLAGS with current numbers of CPU
-#
-- name: MAKEFLAGS in /etc/makepkg.conf
-  shell:
-    cmd: grep -c ^MAKEFLAGS /etc/makepkg.conf
-  register: grep_makeflags
-  ignore_errors: true
-  changed_when: false
-  failed_when: grep_makeflags.rc not in [ 0, 1 ]
-
-- name: addline MAKEFLAGS
-  lineinfile:
-    dest: "/etc/makepkg.conf"
-    insertafter: '^#MAKEFLAGS=*'
-    line: MAKEFLAGS="-j{{ansible_processor_nproc}}"
-  when: grep_makeflags.stdout == '0'
+  # Disable Beep in terminal
+  #
+  - name: Copy file for disabling beep in terminal
+    ansible.builtin.copy:
+       src: nobeep.conf
+       dest: /etc/modprobe.d/nobeep.conf
+       owner: root
+       group: root
+       mode: '0644'
+  
+  # Configure swappiness
+  #
+  - name: Copy file for swappiness
+    ansible.builtin.copy:
+       src: 99-swappiness.conf
+       dest: /etc/sysctl.d/99-swappiness.conf
+       owner: root
+       group: root
+       mode: '0644'
+  
+  # Config RTL8723BE Wifi adapter
+  #
+  - name: get value
+    ansible.builtin.shell:
+      cmd: lspci  | grep -ic RTL8723BE
+    register: grep_output
+    ignore_errors: yes
+    changed_when: false
+  
+  - name: Print
+    ansible.builtin.debug:
+      var="grep_output.stdout_lines"
+  
+  - name: Copy config file for RTL8723BE Wifi adapter
+    ansible.builtin.copy:
+       src: rtl8723be.conf
+       dest: /etc/modprobe.d/rtl8723be.conf
+       owner: root
+       group: root
+       mode: '0644'
+    when: grep_output.stdout == '1'
+  
+  # ILoveCandy pacman instead #
+  #
+  - name: Check ILoveCandy in pacman.conf
+    ansible.builtin.shell:
+      cmd: grep -ic ILoveCandy /etc/pacman.conf
+    register: grep_candy
+    ignore_errors: true
+    changed_when: false
+    failed_when: grep_candy.rc not in [ 0, 1 ]
+  
+  - name: addline ILoveCandy
+    ansible.builtin.lineinfile:
+      dest: "/etc/pacman.conf"
+      insertafter: '\[options\]'
+      line: "ILoveCandy"
+    when: grep_candy.stdout == '0'
+  
+  # Color pacman
+  #
+  - name: Check Color in pacman.conf
+    ansible.builtin.shell:
+      cmd: grep ^Color -c /etc/pacman.conf
+    register: grep_color
+    ignore_errors: true
+    changed_when: false
+    failed_when: grep_color.rc not in [ 0, 1 ]
+  
+  - name: addline Color
+    ansible.builtin.lineinfile:
+      dest: "/etc/pacman.conf"
+      insertafter: '\[options\]'
+      line: "Color"
+    when: grep_color.stdout == '0'
+  
+  # Configure MAKEFLAGS with current numbers of CPU
+  #
+  - name: MAKEFLAGS in /etc/makepkg.conf
+    ansible.builtin.shell:
+      cmd: grep -c ^MAKEFLAGS /etc/makepkg.conf
+    register: grep_makeflags
+    ignore_errors: true
+    changed_when: false
+    failed_when: grep_makeflags.rc not in [ 0, 1 ]
+  
+  - name: addline MAKEFLAGS
+    ansible.builtin.lineinfile:
+      dest: "/etc/makepkg.conf"
+      insertafter: '^#MAKEFLAGS=*'
+      line: MAKEFLAGS="-j{{ansible_processor_nproc}}"
+    when: grep_makeflags.stdout == '0'

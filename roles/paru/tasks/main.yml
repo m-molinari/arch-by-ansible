@@ -1,20 +1,23 @@
 ---
-- name: Install required packages
-  pacman:
-    name: base-devel
-    state: present
-
-- name: Clone paru repository
-  become_user: "{{ user.name }}"
-  git: repo=https://aur.archlinux.org/paru.git dest={{ user.home }}/paru_tmp/ accept_hostkey=yes update=yes
-
-- name: Create binary
-  become_user: "{{ user.name }}"
-  shell: cd {{ user.home }}/paru_tmp/  && makepkg -si --noconfirm
-
-- name: Install paru packages
-  become: yes
-  become_user: "{{ user.name }}"
-  shell: paru --noconfirm -S {{ item }}
-  with_items:
-    - "{{ list_of_packages }}"
+- name: paru tasks
+  tags: paru
+  block:
+  - name: Install required packages
+    ansible.builtin.pacman:
+      name: base-devel
+      state: present
+  
+  - name: Clone paru repository
+    become_user: "{{ user.name }}"
+    ansible.builtin.git: repo=https://aur.archlinux.org/paru.git dest={{ user.home }}/paru_tmp/ accept_hostkey=yes update=yes
+  
+  - name: Create binary
+    become_user: "{{ user.name }}"
+    ansible.builtin.shell: cd {{ user.home }}/paru_tmp/  && makepkg -si --noconfirm
+  
+  - name: Install paru packages
+    become: yes
+    become_user: "{{ user.name }}"
+    ansible.builtin.shell: paru --noconfirm -S {{ item }}
+    with_items:
+      - "{{ list_of_packages }}"

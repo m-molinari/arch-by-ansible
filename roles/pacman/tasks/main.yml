@@ -1,6 +1,6 @@
 ---
 - name: Install packages
-  pacman: name={{ item }} state=present
+  ansible.builtin.pacman: name={{ item }} state=present
   with_items:
     - ['{{ grub }}']
     - ['{{ kernel }}']
@@ -15,3 +15,4 @@
     - ['{{ dev }}']
     - ['{{ sys }}']
     - ['{{ virtualbox }}']
+  tags: pacman

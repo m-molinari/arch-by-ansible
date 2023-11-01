@@ -1,19 +1,21 @@
 ---
-- name: Install packages
-  pacman: name={{ item }} state=present
-  with_items:
-    - ['{{ display_manager }}']
-    - ['{{ cinnamon }}']
-    - ['{{ applications }}']
-    - ['{{ clients }}']
-    - ['{{ graphics }}']
-    - ['{{ video }}']
-
-- name: Create xinitrc file
-  copy:
-    src: files/xinitrc
-    dest: "{{ user.home }}/.xinitrc"
-    owner: "{{ user.name }}"
-    group: "{{ user.name }}"
-    mode: '0644'
-
+- name: cinnamon tasks
+  tags: cinnamon
+  block:
+  - name: Install packages
+    ansible.builtin.pacman: name={{ item }} state=present
+    with_items:
+      - ['{{ display_manager }}']
+      - ['{{ cinnamon }}']
+      - ['{{ applications }}']
+      - ['{{ clients }}']
+      - ['{{ graphics }}']
+      - ['{{ video }}']
+  
+  - name: Create xinitrc file
+    ansible.builtin.copy:
+      src: files/xinitrc
+      dest: "{{ user.home }}/.xinitrc"
+      owner: "{{ user.name }}"
+      group: "{{ user.name }}"
+      mode: '0644'
