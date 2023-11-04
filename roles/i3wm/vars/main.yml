@@ -23,6 +23,7 @@ i3wm:
     - polkit-gnome
     - ranger
     - rofi
+    - awesome-terminal-fonts  
     - ttf-font-awesome
     - ttf-droid
     - volumeicon
