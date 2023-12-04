@@ -19,7 +19,22 @@
       mode: '0644'
     notify:
       - restart rsyslog
-  
+
+  - name: Check ForwardToSyslog /etc/systemd/journald.conf
+    ansible.builtin.shell:
+      cmd: grep -c ^ForwardToSyslog /etc/systemd/journald.conf
+    register: grep_fwdsyslog
+    ignore_errors: true
+    changed_when: false
+    failed_when: grep_fwdsyslog.rc not in [ 0, 1 ]
+
+  - name: addline ForwardToSyslog
+    ansible.builtin.lineinfile:
+      dest: "/etc/systemd/journald.conf"
+      insertafter: '#ForwardToSyslog=no'
+      line: "ForwardToSyslog=yes"
+    when: grep_fwdsyslog.stdout == '0'
+    
   - name: make configuration directory
     ansible.builtin.file:
       name: /etc/rsyslog.d/
