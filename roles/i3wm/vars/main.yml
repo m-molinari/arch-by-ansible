@@ -21,6 +21,7 @@ i3wm:
     - picom
     - playerctl
     - polkit-gnome
+    - polybar
     - ranger
     - rofi
     - awesome-terminal-fonts  
@@ -36,5 +37,4 @@ i3wm:
 
 i3wm_paru:
     - i3lock-color
-    - i3-scrot
     - lightdm-settings
