@@ -12,7 +12,12 @@
       state: started
       enabled: yes
   
-    #ansible.builtin.systemd:
-    #  name: cups-browsed.service
-    #  state: started
-    #  enabled: yes
+    ansible.builtin.systemd:
+      name: cups
+      state: started
+      enabled: yes
+
+    ansible.builtin.systemd:
+      name: bluetooth
+      state: started
+      enabled: yes
